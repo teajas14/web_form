@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feedback & Review System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            width: 320px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        input, textarea, button {
+            width: 100%;
+            margin-bottom: 12px;
+            padding: 8px;
+            font-size: 14px;
+        }
+
+        textarea {
+            resize: none;
+            height: 70px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Submit Feedback</h2>
+
+    <!-- IMPORTANT: form ID -->
+    <form id="feedbackForm">
+
+        <!-- IDs must match script.js -->
+        <input type="text" id="name" placeholder="Your Name" required>
+
+        <input type="number" id="rating" placeholder="Rating (1-5)" min="1" max="5" required>
+
+        <textarea id="comment" placeholder="Your Feedback" required></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<!-- IMPORTANT: script linked at bottom -->
+<script src="script.js"></script>
+
+</body>
+</html>
